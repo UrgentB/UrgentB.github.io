@@ -1,0 +1,61 @@
+body{
+    background-image: url(back.png);
+    background-color: rgba(0, 0, 0, 0.89);
+    background-attachment: fixed;
+}
+tr{
+    text-align: center;
+}
+table{
+    background-color: rgb(0, 0, 0);
+    margin: auto;
+    font: 18pt Time New Roman;
+    color: rgb(146, 107, 21);
+}
+A{
+    color: rgb(146, 107, 21);
+}
+A:visited {
+    color: rgb(146, 107, 21);
+}
+A:active {
+    color: rgb(146, 107, 21);
+}
+@font-face{
+    font-family: Blago;
+    src: url(BLAGO.ttf);
+}
+
+.menu{
+    font: 30pt Blago;
+    text-align: center;
+    color: rgb(146, 107, 21);
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 6px double rgb(146,107,21);
+    background-color: black;
+}
+.menubutton{
+    display: inline;
+    position: relative;
+    padding-left: 2%;
+    margin-right: 2%;
+}
+.content{
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2% 2% 2% 2%;
+    font: 18pt Time New Roman;
+    text-align: justify;
+    background-color: black;
+    border: 3px solid rgb(146, 107, 21);
+    color: rgb(146, 107, 21);
+}
+.descase{
+    padding: 2% 2% 2% 2%;
+    text-align: justify;
+    text-indent: 20px;
+}
+        
