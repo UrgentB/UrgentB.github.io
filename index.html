@@ -1,143 +1,19 @@
-<html>
-    <head>
-        <title>Открыточка</title>
-        <meta charset="utf-8">
-        <style>
-            body {
-                background: linear-gradient(-45deg, #ee7752, black, #23a6d5, #23d5ab);
-                background-size: 400% 400%;
-                animation: gradient 15s ease infinite;
-                height: 100vh;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+</head>
+<body>
+    <div>
+        <video id="qr-video" width="300" height="200" autoplay></video>
+    </div>
+    <div>
+        <p>Результат: <span id="qr-result"></span></p>
+    </div>
 
-            @keyframes gradient {
-                0% {
-                    background-position: 0% 50%;
-                }
-                50% {
-                    background-position: 100% 50%;
-                }
-                100% {
-                    background-position: 0% 50%;
-                }
-            }
-
-            .image{
-                position: absolute;
-                width: 75%;
-                -webkit-transform: translateX(-50%) translateY(-50%);
-                -moz-transform: translateX(-50%) translateY(-50%);
-                -ms-transform: translateX(-50%) translateY(-50%);
-                -o-transform: translateX(-50%) translateY(-50%);
-                transform: translateX(-50%) translateY(-50%);
-                -webkit-animation: imagesFading 8s infinite;
-                -moz-animation: imagesFading 8s infinite;
-                -o-animation: imagesFading 8s infinite;
-                animation: imagesFading 8s infinite;
-                
-            }
-
-            .staticimage{
-                position: absolute;
-                width: 75%;
-                -webkit-transform: translateX(-50%) translateY(-50%);
-                -moz-transform: translateX(-50%) translateY(-50%);
-                -ms-transform: translateX(-50%) translateY(-50%);
-                -o-transform: translateX(-50%) translateY(-50%);
-                transform: translateX(-50%) translateY(-50%);
-            }
-
-            .image_01 {animation-delay: 2s;}
-
-            .image_02 {animation-delay: 4s;}
-
-            .image_03 {animation-delay: 6s;}
-
-            @keyframes imagesFading {
-                0% {
-                    opacity:1;
-                }
-                17% {
-                    opacity:1;
-                }
-                25% {
-                    opacity:0;
-                }
-                92% {
-                    opacity:1;
-                }
-                100% {
-                    opacity:1;
-                }
-            }
-
-            @keyframes slide{
-                from{
-                    margin-top: 0px;
-                    opacity: 0;
-                }
-                to{
-                    margin-top: 30px;
-                    opacity: 1;
-                }
-            }
-
-            .base{
-                background-color: black;
-                margin: 10px;
-                margin-top: 30px;
-                border: 6px solid black;
-                border-radius: 25px;
-                animation: slide 2s ease;
-            }
-
-            .title{
-                margin-left: 50px;
-                margin-right: 50px;
-                font-size: 45;
-                color: rgb(194, 194, 194);
-                margin-bottom: 20px;
-            }
-
-            .content{
-                margin-left: 10px;
-                margin-right: 10px;
-                font-size: 35;
-                color: rgb(194, 194, 194);
-            }
-        </style>
-    </head>
-    <body>
-        <div align="center" class="base" >
-            <div align="center" class="title" >
-                Пояснительная записка для подарка
-            </div>
-            <div align="justify" class="content">
-                Творческая деятельность крайне полезна для ментального благосостояния человека. Она улучшает:
-                <ul>
-                    <li>Устойчивость к стрессу</li>
-                    <li>Способность быстро адаптироваться</li>
-                    <li>Способность находить нестандартные решения</li>
-                </ul>
-                Современное культурное и технологическое развитие общества позволяет многими способами вырожать свои художественные задумки. 
-                Одним из таких способов явлется живопись. 
-                А из живописи выделяется написание картин акварельными красками, технология которых позволяет им умиратворяюще растекаться по холсту.
-                По рекомендации <a href="https://vk.com/ladushekoladushek">экспертки</a> была выбрана марка красок "White Nights".
-                Путём визуального анализа (офигивал 5 минут от колличества слов, которыми можно обозвать синий цвет) были выбраны следующие цвета:
-                <ul>
-                    <li>Ультрамарин тёмный (тебе нужно много-много синева с твоими акулами!)</li>
-                    <li>Венецианская пурпурная (пурпур - богатсво, страсть, романтика)</li>
-                    <li>Гематитовая дымка (какая-то крутая краска, но я уже забыл в чём у неё прикол)</li>
-                </ul>
-                <div align="center">И под конец посмотри на солнышко!</div>
-            </div>
-        </div>
-        
-        <div align="center" title="Солнышко!" style="margin-top: 300px">
-            <img src="frame.png" class="staticimage">
-            <img src="frame1.png" class="image image_01">
-            <img src="frame2.png" class="image image_02">
-            <img src="frame3.png" class="image image_03">
-        </div>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+    <script src="scanner.js"></script>
+</body>
 </html>
